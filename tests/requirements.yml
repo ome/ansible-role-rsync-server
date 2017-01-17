@@ -1,0 +1,2 @@
+- src: openmicroscopy.logrotate
+- src: openmicroscopy.selinux-utils
