@@ -1,0 +1,43 @@
+---
+# tasks file for rsync-server
+
+- name: rsyncd | install rsync
+  become: yes
+  yum:
+    pkg: rsync
+    state: present
+
+- name: rsyncd | create log directory
+  become: yes
+  file:
+    path: /var/log/rsyncd
+    state: directory
+
+- name: rsyncd | configure shares
+  become: yes
+  template:
+    dest: /etc/rsyncd.conf
+    src: etc-rsyncd-conf.j2
+  # No need to reload, file is re-read on each client connection.
+
+- name: rsyncd | configure logrotate
+  become: yes
+  template:
+    backup: no
+    dest: /etc/logrotate.d/rsyncd
+    src: logrotated-rsyncd.j2
+
+- name: rsyncd | selinux allow network connect
+  become: yes
+  seboolean:
+    name: rsync_export_all_ro
+    state: yes
+    persistent: yes
+  when: selinux_enabled
+
+- name: rsyncd | start and enable service
+  become: yes
+  service:
+    name: rsyncd
+    enabled: yes
+    state: started
