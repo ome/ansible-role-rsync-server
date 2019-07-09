@@ -8,8 +8,9 @@ galaxy_info:
   - name: EL
     versions:
     - 7
+  role_name: rsync_server
   galaxy_tags: []
 
 dependencies:
-- role: openmicroscopy.logrotate
-- role: openmicroscopy.selinux-utils
+- role: ome.logrotate
+- role: ome.selinux_utils
