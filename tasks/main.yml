@@ -17,7 +17,7 @@
   become: yes
   template:
     dest: /etc/rsyncd.conf
-    src: etc-rsyncd-conf.j2
+    src: etc/rsyncd.conf.j2
   # No need to reload, file is re-read on each client connection.
 
 - name: rsyncd | configure logrotate
@@ -25,7 +25,7 @@
   template:
     backup: no
     dest: /etc/logrotate.d/rsyncd
-    src: logrotated-rsyncd.j2
+    src: etc/logrotate.d/rsyncd.j2
 
 - name: rsyncd | selinux allow network connect
   become: yes
