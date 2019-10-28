@@ -1,2 +1,3 @@
+---
 - src: ome.logrotate
 - src: ome.selinux_utils
