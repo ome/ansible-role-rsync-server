@@ -4,6 +4,7 @@
 timeout = {{ rsync_server_timeout }}
 max connections = {{ rsync_server_max_connections }}
 log file = /var/log/rsyncd/rsyncd.log
+dont compress = *.gz *.tgz *.zip *.z *.Z *.rpm *.deb *.bz2 *.lzo *.lz4 *.xz *.txz *.zstd *.lz *.apk *.cab *.dmg *.rar *.war *.jar
 
 
 {% for share in rsync_server_shares %}
