@@ -25,7 +25,7 @@ Defaults: `defaults/main.yml`
 
 
 Log rotation:
-- `rsync_server_logrotate_interval`: Rotate log files at this interval, default `weeky`
+- `rsync_server_logrotate_interval`: Rotate log files at this interval, default `weekly`
 - `rsync_server_logrotate_backlog_size`: Number of backlog files to keep, default `52`
 
 
