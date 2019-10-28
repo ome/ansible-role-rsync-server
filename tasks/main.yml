@@ -33,7 +33,7 @@
     name: rsync_export_all_ro
     state: yes
     persistent: yes
-  when: selinux_enabled
+  when: ansible_facts.selinux is defined and ansible_facts.selinux.status == 'enabled'
 
 - name: rsyncd | start and enable service
   become: yes

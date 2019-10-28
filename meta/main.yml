@@ -13,4 +13,3 @@ galaxy_info:
 
 dependencies:
 - role: ome.logrotate
-- role: ome.selinux_utils
