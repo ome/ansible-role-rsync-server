@@ -6,7 +6,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: instance
+  - name: rsync-server
     image: centos/systemd:latest
     privileged: true
     command: /sbin/init
