@@ -1,8 +1,0 @@
----
-- hosts: all
-  roles:
-    - role: ansible-role-rsync-server
-      rsync_server_shares:
-      - name: dataset-1
-        comment: Public datasets
-        path: /data/1
