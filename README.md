@@ -41,6 +41,13 @@ Example Playbook
           path: /data/1
 
 
+Related roles
+-------------
+
+This role was originally written with the OME's minimal requirements in mind.
+Please also take a look at [@stejoo's fork](https://github.com/stejoo/ansible-role-rsync-server/tree/stejoo) which has additional features.
+
+
 Author Information
 ------------------
 
