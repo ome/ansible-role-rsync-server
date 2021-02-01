@@ -1,7 +1,7 @@
 Rsync Server
 ============
 
-[![Build Status](https://travis-ci.org/ome/ansible-role-rsync-server.svg)](https://travis-ci.org/ome/ansible-role-rsync-server)
+[![Actions Status](https://github.com/ome/ansible-role-rsync-server/workflows/Molecule/badge.svg)](https://github.com/ome/ansible-role-rsync-server/actions)
 [![Ansible Role](https://img.shields.io/ansible/role/41886.svg)](https://galaxy.ansible.com/ome/rsync_server/)
 
 Setup rsync as a server.
