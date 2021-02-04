@@ -14,4 +14,4 @@ def test_rsync_running(host):
 
 def test_connect_rsync(host):
     out = host.check_output('rsync rsync://localhost')
-    assert re.match('dataset-1\s+Public datasets', out)
+    assert re.match(r'dataset-1\s+Public datasets', out)

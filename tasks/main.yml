@@ -12,12 +12,14 @@
   file:
     path: /var/log/rsyncd
     state: directory
+    mode: 0755
 
 - name: rsyncd | configure shares
   become: true
   template:
     dest: /etc/rsyncd.conf
     src: etc-rsyncd-conf.j2
+    mode: 0644
     # No need to reload, file is re-read on each client connection.
 
 - name: rsyncd | configure logrotate
@@ -26,6 +28,7 @@
     backup: false
     dest: /etc/logrotate.d/rsyncd
     src: logrotated-rsyncd.j2
+    mode: 0644
 
 - name: rsyncd | selinux allow network connect
   become: true
