@@ -18,7 +18,7 @@
   become: true
   template:
     dest: /etc/rsyncd.conf
-    src: etc-rsyncd-conf.j2
+    src: etc-rsyncd.conf.j2
     mode: 0644
     # No need to reload, file is re-read on each client connection.
 
