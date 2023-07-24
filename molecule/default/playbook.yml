@@ -2,7 +2,7 @@
 - name: Converge
   hosts: all
   roles:
-    - role: ansible-role-rsync-server
+    - role: ome.rsync_server
       rsync_server_shares:
         - name: dataset-1
           comment: Public datasets
