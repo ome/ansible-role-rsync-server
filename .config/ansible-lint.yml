@@ -2,4 +2,4 @@
 # .ansible-lint
 
 skip_list:
-  - ome.logrotate
+  - syntax-check[specific]
