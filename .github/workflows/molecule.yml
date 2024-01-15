@@ -61,4 +61,3 @@ jobs:
           galaxy-api-key: ${{ secrets.GALAXY_API_KEY }}
           galaxy-version: ${{ github.ref_name }}
           role-name: ${{ steps.role-name.outputs.rolename }}
-
